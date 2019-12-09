@@ -7,13 +7,8 @@ class UI {
     }
 
     showWeather(info) {
-        // Location
         this.location.innerHTML = info.name
-
-        // Description
         this.description.innerHTML = info.weather[0].description
-
-        // Temperature
         this.temperature.innerHTML = `${info.main.temp.toFixed()}&deg;F`
 
         // Icon
@@ -21,3 +16,5 @@ class UI {
         this.icon.setAttribute('src', `http://openweathermap.org/img/wn/${img}@2x.png`)
     }
 }
+
+export { UI }
