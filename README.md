@@ -7,12 +7,14 @@ A web app to get the current weather by zip code.
 
 ### Install
 Install dependencies.
+
 ``
 npm install
 ``
 
 ### Build for production
 Bundle JavaScript files.
+
 ``
 npm run build
 ``
