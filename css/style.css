@@ -58,7 +58,9 @@ a:hover {
     background: #ffcc59;
     width: 100%;
 	margin: auto;
+	min-height: 322px;
 	text-align: center;
+	position: relative;
     padding: 2rem 3rem 4rem;
     border-radius: 6px;
 }
@@ -74,7 +76,8 @@ a:hover {
 	border-bottom: 4px solid #3b3b3b;
 }
 
-.weather-app h2 {
+.location {
+	min-height: 3.3rem;
     margin: 1rem 0 0;
 }
 
@@ -124,6 +127,34 @@ a:hover {
 	border-radius: 3px;
 	text-align: center;
 }
+
+/* Misc
+---------------------------*/
+
+.loading {
+	border: 6px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 6px solid #3498db;
+	width: 60px;
+	height: 60px;
+	margin: auto;
+	position: absolute;
+    top: 20%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	animation: spin 1s linear infinite;
+}
+  
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+  
 
 /* Media queries
 ---------------------------*/

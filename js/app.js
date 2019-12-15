@@ -26,7 +26,11 @@ const getZipCode = () => {
 const loadWeather = (lat, long) => {
     weather.loadWeather(lat, long)
     .then(results => {
-        ui.showWeather(results)
+        ui.showLoading()
+        setTimeout(() => {
+            ui.showWeather(results)
+        }, 1000)
+        
     })
 }
 
