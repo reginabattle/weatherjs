@@ -9,7 +9,7 @@ class UI {
     showWeather(info) {
         this.location.innerHTML = info.name
         this.description.innerHTML = info.weather[0].description
-        this.temperature.innerHTML = `${info.main.temp.toFixed()}&deg;F`
+        this.temperature.innerHTML = `${info.main.temp.toFixed()}`
 
         // Icon
         const img = info.weather[0].icon

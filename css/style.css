@@ -75,7 +75,7 @@ a:hover {
 }
 
 .weather-app h2 {
-    margin: 0;
+    margin: 1rem 0 0;
 }
 
 /* Info */
@@ -92,7 +92,14 @@ a:hover {
 	font-size: 6.8rem;
 	font-weight: 600;
 	line-height: 1.1;
-	margin: -2.8rem 0 0.8rem;
+	margin: -2.4rem 0 0;
+	position: relative;
+}
+
+.temperature::after {
+	content: '\00b0';
+	position: absolute;
+	top: 0;
 }
 
 .description {
