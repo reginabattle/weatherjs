@@ -29,8 +29,7 @@ const loadWeather = (lat, long) => {
         ui.showLoading()
         setTimeout(() => {
             ui.showWeather(results)
-        }, 1000)
-        
+        }, 1000) 
     })
 }
 

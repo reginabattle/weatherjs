@@ -1,10 +1,7 @@
 class UI {
     constructor() {
-        this.container = document.querySelector('.weather-temp')
+        this.container = document.querySelector('.weather-details')
         this.location = document.querySelector('.location')
-        this.description = document.querySelector('.description')
-        this.temperature = document.querySelector('.temperature')
-        this.icon = document.querySelector('.weather-icon')
     }
 
     showLoading() {
@@ -18,13 +15,21 @@ class UI {
     }
 
     showWeather(info) {
+        const div = document.createElement('div')
         const icon = info.weather[0].icon
         const iconUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`
 
+        this.container.innerHTML = ''
         this.location.innerHTML = info.name
-        this.container.innerHTML += `<img class="weather-icon" src="${iconUrl}" alt="Current weather">`
-        this.container.innerHTML += `<p class="temperature">${info.main.temp.toFixed()}</p>`
-        this.container.innerHTML += `<p class="description">${info.weather[0].description}</p>`
+        
+        div.classList.add('weather-temp')
+        div.innerHTML = 
+        `
+            <img class="weather-icon" src="${iconUrl}" alt="Current weather">
+            <p class="temperature">${info.main.temp.toFixed()}</p>
+            <p class="description">${info.weather[0].description}</p>
+        `
+        this.container.appendChild(div)
     }
 }
 

@@ -48,12 +48,22 @@ a:hover {
 .container {
     height: 100%;
     display: flex;
-    align-items: center;
+	align-items: center;
+	flex-direction: column;
 	padding: 0 3rem;
 }
 
 /* Weather app
 ---------------------------*/
+.app-header {
+	margin-bottom: 2.6rem;
+	text-align: center;
+}
+
+.app-header h1 {
+	margin: 3rem 0 1rem;
+}
+
 .weather-app {
     background: #ffcc59;
     width: 100%;
@@ -130,11 +140,10 @@ a:hover {
 
 /* Misc
 ---------------------------*/
-
 .loading {
 	border: 6px solid #f3f3f3;
 	border-radius: 50%;
-	border-top: 6px solid #3498db;
+	border-top: 6px solid #3b3b3b;;
 	width: 60px;
 	height: 60px;
 	margin: auto;
